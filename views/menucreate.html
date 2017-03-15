@@ -1,0 +1,34 @@
+<div class="container" ng-controller="CreateMenuCtrl">
+
+<form ng-submit="saveMenu()">
+
+<div class="form-group"> <!-- Name field -->
+<label class="control-label " for="name">Name</label>
+<input class="form-control" id="name" name="name" ng-model="Menu.name" type="text"/>
+</div>
+
+<div class="form-group"> <!-- Email field -->
+<label class="control-label requiredField" for="Price">Price</label>
+<input class="form-control" id="price" name="price" ng-model="Menu.price" step="0.01" min="1" type="number"/>
+</div>
+<!--<div class="form-group"> <!-- picture field -->
+<!--<label class="control-label requiredField" for="picture">Picture</label>
+<input class="form-control" id="picture" name="picture" ng-model="Menu.picture" type="text"/>
+</div>-->
+
+<div class="form-group"> <!-- others field -->
+<label class="control-label " for="Category">Category</label>
+<input class="form-control" id="Category" name="Category" ng-model="Menu.category" type="text"/>
+<input type="hidden" name="description" ng-model="Menu.description" ng-init="Menu.description = 1" id="description"/>
+</div>
+
+<div class="form-group"> <!-- Upload field -->
+	<input type="file" name="file" uploader-model="Menu.picture">
+</div>
+
+<div class="form-group">
+<button class="btn btn-primary " name="submit" type="submit">Submit</button>
+</div>
+
+</form>
+</div>

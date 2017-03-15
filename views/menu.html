@@ -1,0 +1,40 @@
+
+<div class="col-md-12" ng-controller="MenuCtrl">
+	<h2>Menu</h2>
+	<div class="row">
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail" ng-repeat="menu in Menu">
+	      <img ng-src="{{menu.picture}}" alt="">
+	      <div class="caption">
+	        <h3>{{menu.name}}</h3>
+	        <p>{{menu.description}}</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Add</a> <label>Cantidad: </label><input type="number" name="quantity" min="1" max="30" class=""></p>
+	        <a ui-sref="app.edit({id: menu.menu_id})" class="btn btn-primary">Edit</a>
+	        <a ng-click="removeMenu(menu.menu_id)" class="btn btn-danger">Delete</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div ng-controller="AuthCtrl">
+		<a ng-click="logout()" class="btn btn-danger">Logout</a>
+	</div>
+	<!--<div class="col-md-8">
+	<table class="table table-striped">
+		<thead>
+			<th>id</th>
+			<th>name</th>
+			<th>price</th>
+			<th>category</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="menu in Menu">
+				<td>{{menu.menu_id}}</td>
+				<td>{{menu.name}}</td>
+				<td>{{menu.price}}</td>
+				<td>{{menu.category}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>-->
+</div>
